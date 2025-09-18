@@ -1,0 +1,77 @@
+/* Reset and base styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f9fb; color: #222; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.header { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.header__container { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.logo { font-size: 1.5rem; font-weight: bold; }
+.logo .blue { color: #1a7ed6; }
+.nav a { margin: 0 12px; color: #222; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.nav a:hover { color: #1a7ed6; }
+.header__right { display: flex; align-items: center; gap: 16px; }
+.phone { color: #1a7ed6; font-weight: bold; text-decoration: none; }
+.btn { background: #1a7ed6; color: #fff; border: none; padding: 10px 22px; border-radius: 4px; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+.btn:hover { background: #155a96; }
+
+/* Hero */
+.hero { background: url('img/hero.jpg') center/cover no-repeat; min-height: 340px; display: flex; align-items: center; }
+.hero__container { padding: 60px 0; text-align: left; }
+.hero h1 { font-size: 2.5rem; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.hero p { color: #fff; margin: 16px 0 24px; font-size: 1.2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+
+/* Services */
+.services { background: #fff; padding: 60px 0 40px; }
+.services h2 { text-align: center; margin-bottom: 36px; color: #1a7ed6; }
+.services__cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.card { background: #f7f9fb; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); padding: 28px 22px; text-align: left; }
+.card h3 { color: #1a7ed6; margin-bottom: 10px; font-size: 1.1rem; }
+.card__link { color: #1a7ed6; text-decoration: none; font-size: 0.98rem; display: inline-block; margin-top: 10px; }
+.card__link:hover { text-decoration: underline; }
+
+/* About */
+.about { background: #f7f9fb; padding: 60px 0; }
+.about__container { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+.about__img img { width: 320px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.about__text { flex: 1; }
+.about__text h2 { color: #1a7ed6; margin-bottom: 18px; }
+.about__text p { margin-bottom: 14px; }
+
+/* Why Choose */
+.why { background: #fff; padding: 60px 0 40px; }
+.why h2 { text-align: center; margin-bottom: 36px; color: #1a7ed6; }
+.why__cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+
+/* Testimonials */
+.testimonials { background: #f7f9fb; padding: 60px 0; }
+.testimonials h2 { text-align: center; margin-bottom: 36px; color: #1a7ed6; }
+.testimonials__cards { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+.testimonial { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 24px 20px; max-width: 420px; }
+.stars { color: #f7b500; font-size: 1.2rem; margin-bottom: 8px; }
+.testimonial__author { margin-top: 10px; font-weight: bold; color: #1a7ed6; font-size: 0.98rem; }
+
+/* Footer */
+.footer { background: #1a7ed6; color: #fff; padding: 32px 0; }
+.footer__container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.footer__link { color: #fff; margin-left: 18px; text-decoration: underline; }
+.footer__link:hover { color: #f7b500; }
+
+/* Modal */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); justify-content: center; align-items: center; }
+.modal__content { background: #fff; padding: 32px 28px; border-radius: 8px; max-width: 400px; width: 100%; position: relative; }
+.modal__close { position: absolute; right: 18px; top: 12px; font-size: 1.5rem; color: #1a7ed6; cursor: pointer; }
+.modal form { display: flex; flex-direction: column; gap: 14px; }
+.modal input, .modal textarea { padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+.modal textarea { min-height: 70px; resize: vertical; }
+
+@media (max-width: 900px) {
+  .about__container { flex-direction: column; align-items: flex-start; }
+  .footer__container { flex-direction: column; gap: 18px; }
+}
+@media (max-width: 600px) {
+  .header__container, .container { padding: 0 8px; }
+  .hero__container { padding: 32px 0; }
+  .about__img img { width: 100%; }
+  .testimonials__cards { flex-direction: column; }
+}
