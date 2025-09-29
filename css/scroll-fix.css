@@ -1,0 +1,154 @@
+/* ПОЛНОЕ ИСПРАВЛЕНИЕ ПРОКРУТКИ */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    height: 100% !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Принудительное исправление всех hero элементов */
+.hero, 
+.page--header,
+.page--bg-hero {
+    height: auto !important;
+    min-height: 300px !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Исправление фиксированных высот */
+[style*="height: 100vh"],
+[style*="height:100vh"] {
+    height: auto !important;
+    min-height: 50vh !important;
+}
+
+/* Мобильные исправления */
+@media screen and (max-width: 960px) {
+    html, body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        height: auto !important;
+        touch-action: pan-y;
+    }
+    
+    .wrapper {
+        overflow-y: auto !important;
+        height: auto !important;
+    }
+    
+    .hero {
+        height: auto !important;
+        min-height: 200px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .hero .header {
+        height: auto !important;
+        min-height: 150px !important;
+        padding-top: 20px;
+        width: calc(100% - 32px);
+        margin: 0 16px;
+    }
+    
+    .page--bg-hero {
+        width: 100vw;
+        height: 200px !important;
+        min-height: 200px !important;
+        max-height: 300px !important;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+    
+    .page--header {
+        padding: 20px 16px;
+        width: auto;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        height: auto !important;
+        min-height: 200px !important;
+        position: relative;
+        top: 0;
+        background-color: rgba(249,249,249,0.85);
+    }
+    
+    .main {
+        padding-top: 0;
+        height: auto !important;
+    }
+    
+    /* Принудительная фиксация для проблемных элементов */
+    section, article, div {
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    /* Исправление навигации */
+    header.top-bar {
+        position: fixed;
+        height: auto !important;
+        z-index: 9999999;
+    }
+}
+
+/* Дополнительные исправления для маленьких экранов */
+@media screen and (max-width: 480px) {
+    .page--bg-hero {
+        height: 150px !important;
+        min-height: 150px !important;
+    }
+    
+    .page--header {
+        min-height: 150px !important;
+        padding: 10px;
+    }
+    
+    .hero {
+        min-height: 120px !important;
+        padding: 10px 0;
+    }
+    
+    .hero .header {
+        min-height: 100px !important;
+        padding: 10px 0;
+    }
+}
+
+/* Принудительное исправление любых overflow: hidden */
+[style*="overflow: hidden"],
+[style*="overflow:hidden"] {
+    overflow: visible !important;
+}
+
+/* Исправление для touch устройств */
+@supports (-webkit-overflow-scrolling: touch) {
+    html, body {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto !important;
+    }
+}
