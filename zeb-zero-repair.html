@@ -98,6 +98,38 @@ You don’t need to worry about brand specifics — this is our specialty.<br>
 We serve only a handful of DFW’s finest neighborhoods, and Sub-Zero is the reason why.<br><br>
 Let’s get your fridge back to flawless.
 </p>
+                    <!-- QUICK QUOTE FORM -->
+                    <div id="quote-form" style="background: #f8f9fa; border: 2px solid #001F92; border-radius: 10px; padding: 20px; margin: 25px 0; text-align: center;">
+                        <h3 style="color: #001F92; margin-bottom: 15px; font-size: 20px;">📞 Schedule Your Sub-Zero Repair</h3>
+                        <form id="quickQuoteForm" style="max-width: 350px; margin: 0 auto;">
+                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 5px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+                            <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 10px; margin-bottom: 5px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+                            <select style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+                                <option>Sub-Zero Refrigerator</option>
+                                <option>Sub-Zero Freezer</option>
+                                <option>Sub-Zero Wine Cooler</option>
+                                <option>Sub-Zero Ice Maker</option>
+                                <option>Other Sub-Zero Appliance</option>
+                            </select>
+                            <button type="submit" style="background: linear-gradient(135deg, #001F92, #001a7a); color: white; border: none; padding: 12px 25px; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%;">📞 SCHEDULE REPAIR NOW</button>
+                        </form>
+                        <script>
+                        document.getElementById("quickQuoteForm").addEventListener("submit", function(e) {
+                            e.preventDefault();
+                            // Track form submission
+                            if (typeof gtag !== "undefined") {
+                                gtag("event", "form_submit", {
+                                    event_category: "engagement",
+                                    event_label: "quick_quote_subzero"
+                                });
+                            }
+                            // Redirect to phone call
+                            window.location.href = "tel:+14697300301";
+                        });
+                        </script>
+                        <p style="font-size: 12px; color: #666; margin-top: 10px;">✅ No obligation • ✅ Same-day service available • ✅ 1-year warranty</p>
+                    </div>
+
                     <p class="pullquote">No human being can live without food. Neither hang on long without a fridge!</p>
 
 <p class="big">It doesn’t matter if you have the latest model of a brand new refrigerator or an old school one. We service all models and types of them: built-in, French door, and top/bottom-freezer ones, undercounter food freezers and even wine cellars. Feel free to call us! All our techs are trained and experienced, they’ll make your fridge running in no time! Also, we provide guarantees for all our work.</p>
