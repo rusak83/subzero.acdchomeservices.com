@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.html": "html"
+    },
+    "html.validate.scripts": true,
+    "html.validate.styles": true,
+    "html.format.enable": true,
+    "emmet.includeLanguages": {
+        "html": "html"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
+}
