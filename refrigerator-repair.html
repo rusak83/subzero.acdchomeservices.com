@@ -112,6 +112,8 @@
         return 'AC/DC';
       }
 
+      var BOOKING_URL = 'https://book.housecallpro.com/book/ACDC-HVAC--Appliance-Repair/53312602f0a846a9b9e0059cfb118440?v2=true';
+
       function trackHousecallClick(event) {
         if (!window.dataLayer) {
           window.dataLayer = [];
@@ -122,12 +124,20 @@
           pagePath: window.location.pathname,
           triggerText: event.currentTarget.textContent.trim()
         });
+
+        if (window.HCPWidget && typeof window.HCPWidget.openModal === 'function') {
+          event.preventDefault();
+          window.HCPWidget.openModal();
+        }
       }
 
       function attachListeners() {
         document.querySelectorAll('.hcp-button').forEach(function(button) {
           if (!button.dataset.hcpBound) {
             button.dataset.hcpBound = 'true';
+            if (button.tagName === 'A') {
+              button.href = BOOKING_URL;
+            }
             button.addEventListener('click', trackHousecallClick);
           }
         });
