@@ -37,6 +37,9 @@
       <div class="button-row">
         <a class="btn-primary" href="/contact.html">Request Service</a>
         <a class="btn-secondary" href="tel:+1-469-730-0301">Call Now: (469) 730-0301</a>
+        <!-- Start of Housecall Pro Online booking button -->
+        <button type="button" class="btn-secondary hcp-button" data-token="53312602f0a846a9b9e0059cfb118440" data-orgname="ACDC-HVAC--Appliance-Repair" onClick="HCPWidget.openModal()">Book Online</button>
+        <!-- End of Housecall Pro Online booking button -->
       </div>
     </div>
   </header>
@@ -87,6 +90,9 @@
       <div class="button-row">
         <a class="btn-primary" href="/contact.html">Schedule Service</a>
         <a class="btn-secondary" href="tel:+1-469-730-0301">Call (469) 730-0301</a>
+        <!-- Start of Housecall Pro Online booking button -->
+        <button type="button" class="btn-secondary hcp-button" data-token="53312602f0a846a9b9e0059cfb118440" data-orgname="ACDC-HVAC--Appliance-Repair" onClick="HCPWidget.openModal()">Book Online</button>
+        <!-- End of Housecall Pro Online booking button -->
       </div>
     </section>
   </main>
@@ -100,6 +106,46 @@
     </div>
   </footer>
 
+  <script async src="https://online-booking.housecallpro.com/script.js?token=53312602f0a846a9b9e0059cfb118440&amp;orgName=ACDC-HVAC--Appliance-Repair"></script>
+  <script>
+    (function() {
+      function getBrandName() {
+        var hostname = window.location.hostname;
+        if (hostname.includes('subzero')) return 'Sub-Zero';
+        if (hostname.includes('viking')) return 'Viking';
+        if (hostname.includes('thermador')) return 'Thermador';
+        if (hostname.includes('icemachines')) return 'Ice Machines';
+        return 'AC/DC';
+      }
+
+      function trackHousecallClick(event) {
+        if (!window.dataLayer) {
+          window.dataLayer = [];
+        }
+        window.dataLayer.push({
+          event: 'housecall_booking_click',
+          brandName: getBrandName(),
+          pagePath: window.location.pathname,
+          triggerText: event.currentTarget.textContent.trim()
+        });
+      }
+
+      function attachListeners() {
+        document.querySelectorAll('.hcp-button').forEach(function(button) {
+          if (!button.dataset.hcpBound) {
+            button.dataset.hcpBound = 'true';
+            button.addEventListener('click', trackHousecallClick);
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachListeners);
+      } else {
+        attachListeners();
+      }
+    })();
+  </script>
   <script src="/js/phone-tracking.js"></script>
 </body>
 </html>
