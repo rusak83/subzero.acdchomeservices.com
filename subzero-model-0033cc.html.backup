@@ -93,8 +93,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <div class="features-grid">
             <div class="feature-card">
-                <h3 class="feature-title">Certified Technicians</h3>
-                <p>Factory-trained specialists with expertise in Sub-Zero systems and components.</p>
+                <h3 class="feature-title">Experienced Technicians</h3>
+                <p>Seasoned specialists with expertise in Sub-Zero systems and components.</p>
             </div>
             
             <div class="feature-card">
@@ -139,7 +139,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </p>
             
             <h3 class="feature-title">Why Choose AC/DC for Sub-Zero Repair?</h3>
-            <p><span class="checkmark">✓</span> Factory-trained Sub-Zero specialists</p>
+            <p><span class="checkmark">✓</span> Seasoned Sub-Zero specialists</p>
             <p><span class="checkmark">✓</span> Genuine Sub-Zero replacement parts</p>
             <p><span class="checkmark">✓</span> Same-day emergency service available</p>
             <p><span class="checkmark">✓</span> Comprehensive warranty on all repairs</p>
