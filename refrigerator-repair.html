@@ -63,6 +63,58 @@
       </ul>
     </section>
 
+    <section id="reviews" class="testimonials">
+      <h2>What Sub-Zero Owners Say</h2>
+      <p class="section-intro">Homeowners across Westlake, Southlake, and Highland Park count on our independent team when their premium refrigeration needs urgent care.</p>
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">“Same-day response, fixed the warm fridge before guests arrived. Honest, clear on pricing, and left the kitchen spotless.”</p>
+          <p class="testimonial-author">Sarah M.<span>Southlake, TX</span></p>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">“They know Sub-Zero systems inside and out. Had the part on the truck and tested everything before they left.”</p>
+          <p class="testimonial-author">Jonathan R.<span>Preston Hollow, Dallas</span></p>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">“Professional, punctual, and respectful of our home. Our wine storage is back to perfect humidity.”</p>
+          <p class="testimonial-author">Elena T.<span>Westlake, TX</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Book a Sub-Zero Diagnostic</h2>
+      <div class="contact-grid">
+        <div class="contact-details">
+          <p class="section-intro">Reach the same small team that services the DFW Metroplex’s luxury homes. Tell us what your Sub-Zero needs and we’ll line up the fastest path to a fix.</p>
+          <ul class="contact-highlights">
+            <li>Live dispatch from 8am–8pm, 7 days a week</li>
+            <li>Stocked OEM boards, fans, gaskets, and sensors</li>
+            <li>Respectful techs who protect floors, cabinetry, and panels</li>
+          </ul>
+        </div>
+        <form id="repairRequestForm" class="contact-form">
+          <label for="contact-name">Your Name
+            <input id="contact-name" name="name" type="text" placeholder="Full name" autocomplete="name" required>
+          </label>
+          <label for="contact-phone">Phone Number
+            <input id="contact-phone" name="phone" type="tel" placeholder="(469) 555-0123" autocomplete="tel" required>
+          </label>
+          <label for="contact-zip">Service ZIP Code
+            <input id="contact-zip" name="zip" type="text" placeholder="e.g. 76092" inputmode="numeric" autocomplete="postal-code" required>
+          </label>
+          <label for="contact-issue">What’s going on?
+            <textarea id="contact-issue" name="issue" placeholder="Example: fridge warm on top, ice maker leaking" required></textarea>
+          </label>
+          <button type="submit" class="btn-primary">Request Same-Day Help</button>
+          <p class="contact-note">No spam, no obligations — you’ll hear back from a Sub-Zero specialist right away.</p>
+        </form>
+      </div>
+    </section>
+
     <section id="cities">
       <h2>Our Serving Cities in Dallas-Fort Worth Area</h2>
       <div class="cities-list">
@@ -148,6 +200,30 @@
       } else {
         attachListeners();
       }
+    })();
+  </script>
+  <script>
+    (function() {
+      var form = document.getElementById('repairRequestForm');
+      if (!form) return;
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var formData = new FormData(form);
+
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'subzero_contact_form_submit',
+            brandName: 'Sub-Zero',
+            pagePath: window.location.pathname,
+            clientName: formData.get('name') || '',
+            clientZip: formData.get('zip') || ''
+          });
+        }
+
+        window.location.href = 'tel:+14697300301';
+      });
     })();
   </script>
   <script src="/js/phone-tracking.js"></script>
