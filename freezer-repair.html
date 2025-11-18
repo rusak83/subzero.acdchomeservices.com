@@ -1,346 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'brandName': 'Sub-Zero' 
-        });
-    </script>
-
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KRWMRCGX');</script>
-<!-- End Google Tag Manager -->
-    <style>
-        h1{
-            color: var(--color-primary);
-        }
-
-        .bg-hero{
-            position: absolute;
-            height: inherit;
-            width: 100%;
-            background-image: url(/assets/images/bg-image-2.webp);
-            background-size: cover;
-            z-index: -1;
-            opacity: 0.2;
-            border-bottom: solid 1px;
-        }
-
-        @media screen and (max-width: 960px){
-            .bg-hero{
-                /* background-image: url(/assets/images/bg-image-2_mobile.webp); */
-                background-image: none;
-                border: none;
-            }
-        }
-
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="content-language" content="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Sub-Zero Freezer Repair | Same-Day Service in DFW</title>
-    <meta name="keywords" content="Freezer repair, diagnostic, Dallas, TX, Arlington, Irving, Denton, Lewisville, Plano, Carrollton, Frisco, Keller, Grapevine, Bedford, Euless, Southlake, Lake Dallas, Roanoke, Argyle, Hebron, Richardson, Corinth, Lantana, Copper Canyon, Highland Village, Double Oak, Watauga, Melody Hills, Richland Hills, North Richland Hills, Haltom City, Blue Mound">
-    <meta name="description" content="Rapid diagnostics for Sub-Zero freezers, columns, and drawers. Emergency temperature recovery with OEM components across Dallas-Fort Worth.">
+    <title>Sub-Zero Freezer Repair in DFW | Certified Same-Day Service</title>
+    <meta name="description" content="Factory-trained Sub-Zero freezer repair techs serving Dallas-Fort Worth. Same-day diagnostics, OEM parts, and 1-year warranty on labor.">
+    <meta name="keywords" content="Sub-Zero freezer repair, Sub-Zero column repair, Sub-Zero ice maker service, Dallas, Fort Worth, Southlake, Highland Park">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ brandName: 'Sub-Zero' });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KRWMRCGX');
+    </script>
+    <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" type="image/png" href="/favicon.png">
-<link rel="stylesheet" href="/css/scroll-fix.css">
+    <style>
+        :root {
+            --brand-primary: #0d2f5a;
+            --brand-accent: #00a0c6;
+            --brand-muted: #f5f8fd;
+            --text-dark: #0b1c30;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body.wrapper {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: var(--text-dark);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        .site-header {
+            background: #fff;
+            border-bottom: 1px solid #e2e8f4;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        .header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 1rem 5%;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--brand-primary);
+        }
+
+        nav a {
+            margin-right: 1rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        nav a:last-child {
+            margin-right: 0;
+        }
+
+        .call-button {
+            background: var(--brand-accent);
+            border: none;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        section {
+            padding: 3rem 5%;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: var(--brand-muted);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            color: var(--brand-primary);
+        }
+
+        .hero img {
+            margin: 1rem 0 1.5rem;
+            border-radius: 0.75rem;
+            width: 600px;
+            max-width: 100%;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 0.9rem 1.4rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--brand-primary);
+            color: #fff;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--brand-primary);
+            color: var(--brand-primary);
+            background: transparent;
+        }
+
+        h2 {
+            color: var(--brand-primary);
+            font-size: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e2e9f2;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 12px 35px rgba(13, 47, 90, 0.08);
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        .coverage-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .schedule-wrapper {
+            margin-top: 1.5rem;
+        }
+
+        .schedule-link {
+            display: inline-block;
+            background: var(--brand-accent);
+            color: #fff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        blockquote {
+            margin: 0;
+            font-style: italic;
+        }
+
+        .site-footer {
+            background: #07152a;
+            color: #fff;
+            padding: 3rem 5%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            margin-bottom: 0.75rem;
+            padding: 0.8rem;
+            border-radius: 0.5rem;
+            border: none;
+        }
+
+        form button {
+            background: var(--brand-accent);
+            border: none;
+            color: #fff;
+            padding: 0.9rem 1.4rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .footer-meta {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #d7e0ef;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            .coverage-list {
+                columns: 1;
+            }
+        }
+    </style>
 </head>
 <body class="wrapper">
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRWMRCGX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <header class="top-bar">
-    <div class="fixed-width-container">
-        <div class="nav--container">
-
-            <a class="nav-link" href="/">
-                <svg id="logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3133.28 928.61"><title>Монтажная область 12 копия</title><path d="M1270.28,513.93l79,295,126-34-78-295Zm-123,166a128,128,0,1,1,128-128A127.61,127.61,0,0,1,1147.28,679.93Zm0,132a260,260,0,1,0-260-260A259.48,259.48,0,0,0,1147.28,811.93Z"/><path d="M1543.28,551.93a260.22,260.22,0,0,0,444,184l-93-93c-23,23-55,37-91,37a128,128,0,0,1,0-256c36,0,68,14,91,38l93-94a260.22,260.22,0,0,0-444,184Z"/><path d="M2441.17,523l127-34-133-489-126,33Zm-189-82c62-35,139-15,174,47s15,139-46,175-140,14-175-47C2169.17,554,2190.17,476,2252.17,441Zm-66-114c-125,72-168,230-96,355,72,124,231,167,356,95,124-72,167-231,95-355C2469.17,297,2310.17,255,2186.17,327Z"/><path d="M2689.28,551.93a260.22,260.22,0,0,0,444,184l-93-93c-23,23-55,37-91,37a128,128,0,0,1,0-256c36,0,68,14,91,38l93-94a260.22,260.22,0,0,0-444,184Z"/><path d="M0,171.89V928.61H756.72V171.89ZM382.89,783.61h0c-129.38,0-234.26-104.89-234.26-234.27h0c0-129.38,104.88-234.26,234.26-234.26h0c129.39,0,234.27,104.88,234.27,234.26h0C617.16,678.72,512.28,783.61,382.89,783.61Z"/></svg>
-            </a>
-
-            <nav class="nav-menu">
-<<<<<<< HEAD
-=======
-                <a href="/85-reasons-book-acdc-appliance-repair" class="nav--contact-name">Why Us</a>
->>>>>>> dd7db15 (Initial commit)
-                <a href="/about" class="nav--contact-name">About</a>
-                <a href="/contacts" class="nav--contact-name">Contacts</a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRWMRCGX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="site-header">
+        <div class="header-bar">
+            <div class="logo">AC/DC Sub-Zero Repair</div>
+            <nav>
+                <a href="/85-reasons-book-acdc-appliance-repair">Why Us</a>
+                <a href="/about">About</a>
+                <a href="/contacts">Contacts</a>
             </nav>
-
+            <button class="call-button" onclick="location.href='tel:+14697300309'">Call Now</button>
         </div>
-    </div>
-</header>
-
-    <main role="main" class="main">
-
-    <!-- CAT -->
-    
-<!-- CAT -->
-<div class="cat-button-container">
-    <a id="cat-button__id-main" href="tel:+14697300309" class="cat-button">
-        CLICK TO CALL +14697300309
-    </a>
-</div>
-
-    <article>
-
-        <!-- TOP HEADER -->
-        <header class="hero">
-
-    <!-- BG HERO -->
-    <!-- <div class="bg-hero--overlay"></div> -->
-    <div class="bg-hero"></div>
-
-    <div class="fixed-width-container">
-        <div class="header">
-            <h1 class="primary-headline">Freezer Repair Services</h1>
-        </div>
-    </div>
-</header>
-
-        <!-- CONTENT -->
-        <section>
-            <div class="fixed-width-container">
-                <div class="col-8">
-                    <hr>
-                    <h3 class="section-subheadline" id="if-your-commercial-refrigerator-or-commercial-freezer-has-stopped-working-call-our-service-center-for-basic-troubleshooting-if-we-cannot-help-you-over-the-phone-we-will-send-a-trained-technician-anywhere-in-dallas-fort-worth-area-the-technicians-at-our-service-center-are-experienced-and-experienced-even-the-best-commercial-refrigerators-and-ice-machines-need-refrigeration-repair-and-service-after-all-its-the-correct-servicing-by-yourself-andor-a-technician-that-helps-your-equipment-last-longer">If your commercial refrigerator or commercial freezer has stopped working, call our service center for basic troubleshooting. If we cannot help you over the phone, we will send a trained technician anywhere in Dallas-Fort Worth Area. <br /><br />The technicians at our service center are factory trained and experienced. Even the best commercial refrigerators and ice machines need refrigeration repair and service. After all, it’s the correct servicing (by yourself and/or a technician) that helps your equipment last longer.</h3>
-
+    </header>
+    <main>
+        <section class="hero">
+            <div class="section-inner">
+                <h1>Sub-Zero Freezer Repair in Dallas-Fort Worth</h1>
+                <img src="/assets/images/subzero-freezer.jpg" alt="Sub-Zero freezer repair technician" />
+                <p>Certified Sub-Zero specialists restore column, PRO, under-counter, and drawer freezers throughout the DFW Metroplex. We carry OEM components, document every service, and protect luxury finishes while we work.</p>
+                <div class="cta-buttons">
+                    <a class="btn-primary" href="https://book.housecallpro.com/book/ACDC-HVAC--Appliance-Repair/53312602f0a846a9b9e0059cfb118440?v2=true" rel="noopener">Book Same-Day Service</a>
+                    <a class="btn-secondary" href="tel:+14697300309">Talk to a Sub-Zero Tech</a>
                 </div>
+                <div class="schedule-wrapper"><a class="schedule-link" href="#contact-form">Schedule Service</a></div>
             </div>
         </section>
-
-        <!-- CITIES -->
-        <section>
-    <div class="fixed-width-container">
-        <div class="card">
-            <h3 class="section-subheadline">Our serving cities in Dallas-Fort Worth Area</h3>
-            
-            
-            <ul class="big four-column">
-                <li>Southlake, TX</li>
-                <li>Westlake, TX</li>
-                <li>Colleyville, TX</li>
-                <li>Trophy Club, TX</li>
-                <li>Highland Village, TX</li>
-                <li>Grapevine, TX</li>
-                <li>Flower Mound, TX</li>
-                <li>Coppell, TX</li>
-                <li>Keller, TX</li>
-                <li>Carrollton, TX</li>
-            </ul>
-
-        </div>
-
-    </div>
-</section>
-
-        <!-- SERVICE DETAILS -->
-        
-            <section>
-    <div class="fixed-width-container">
-        <div class="col-8">
-            <hr>
-            <h2 class="section-headline">Refrigerator and freezer repair price range</h2>
-            <p class="big"><a href="/refrigerator-repair">We can repair every all kinds of refrigerators</a> (built-in, French-door, top/bottom-freezer ones, etc.), undercounter food freezers and even wine cellars. We provide services for all brands and models. Feel free to call us! All our techs are trained and insured, and we provide guarantees for all our work. You can rest assured, we’ll have your fridge up and running in no time!</p>
-
-            <div class="card">
-                <h3 class="section-subheadline">Typical problems</h3>
+        <section id="services">
+            <div class="section-inner">
+                <h2>Sub-Zero Freezer Services</h2>
+                <p>From panel-ready columns in Highland Park to PRO48 units in Trophy Club, we repair every Sub-Zero freezer platform. Diagnostics are $90 and credited toward the repair.</p>
                 <ul>
-                    <li>Not cooling</li>
-                    <li>Water dispenser/ice maker/ice dispenser is not working</li>
-                    <li>Ice maker is overflowing</li>
-                    <li>Not defrosting</li>
-                    <li>Noisy</li>
-                    <li>Defrost drain is clogged</li>
-                    <li>Freezer is cold but fridge is too warm</li>
-                    <li>Water is leaking</li>
-                    <li>Food is freezing</li>
-                    <li>Light is not working</li>
-                    <li>Fridge is running constantly</li>
+                    <li>Sealed-system work: compressors, evaporators, filter-driers, and moisture evacuation</li>
+                    <li>Thermistor, control board, and software updates for classic and Designer Series units</li>
+                    <li>Defrost and heater harness repairs to stop ice-up and temperature swings</li>
+                    <li>Door seal, hinge, and soft-close adjustments for overlay panels</li>
+                    <li>Ice maker rebuilds, water valve replacements, and anti-scale filtration</li>
                 </ul>
+                <div class="schedule-wrapper"><a class="schedule-link" href="#contact-form">Schedule Service</a></div>
             </div>
-
-            <div class="card">
-                <h3 class="section-subheadline">Refrigerator and freezer brands we repair</h3>
-                <ul class="two-column">
-                    <li>Sub-Zero</li>
-                    <li>Thermador</li>
-                    <li>Viking</li>
-                    <li>Monogram</li>
-                    <li>JennAir</li>
-                    <li>KitchenAid</li>
-                    <li>Dacor</li>
-                    <li>True Residential</li>
+        </section>
+        <section id="problems" style="background:#f9fbff;">
+            <div class="section-inner">
+                <h2>Typical Sub-Zero Freezer Issues</h2>
+                <img src="/assets/images/subzero-diagnostics.jpg" alt="Before and after Sub-Zero freezer repair" style="width:400px;max-width:100%;border-radius:0.75rem;margin-bottom:1rem;">
+                <ul>
+                    <li>Warm drawer or high-temp alarm after a door was left open</li>
+                    <li>Evaporator frosting or moisture on shelves due to failed heaters</li>
+                    <li>Condenser fan noise or vibration in older BI series cabinets</li>
+                    <li>Ice maker leaking into the freezer bin</li>
+                    <li>Vacuum condenser light that will not clear</li>
+                    <li>Control board error codes like EC40, EC24, or EC50</li>
                 </ul>
-                <p class="big">
-                    We focus on premium refrigeration brands &mdash; Sub-Zero, Thermador, Viking, Monogram, JennAir, KitchenAid, Dacor, and True Residential. If you don&#39;t see your badge here, reach out and we&#39;ll let you know how we can help.
-                </p>
+                <p>We log pressure readings and fault codes for each visit so returning clients get faster approvals and cleaner service records.</p>
+                <div class="schedule-wrapper"><a class="schedule-link" href="#contact-form">Schedule Service</a></div>
             </div>
-        </div>
-    </div>
-</section>
-
-        
-
-        <!-- REVIEWS -->
-        <section>
-    <div class="fixed-width-container">
-        <hr>
-        <h2 class="section-headline">What our customers say</h2>
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-        <div class="elfsight-app-27ba2164-9624-4923-84ac-869de3348ad8"></div>
-    </div>
-</section>
-
-        <!-- BENEFITS -->
-        <section class="section__colored">
-    <div class="fixed-width-container">
-        <h2 class="section-headline white benefits-title">Our advantages</h2>
-
-        <div class="benefits-list">
-
-            <div class="benefits-block">
-                <img class="benefits-image" src="/assets/svg/warrenty.svg" alt="">
-                <h3 class="section-subheadline white">1-year warranty</h3>
-<p class="big white__muted">We back every repair with a full 1-year warranty covering both labor and OEM parts installed by our team.</p>
+        </section>
+        <section id="investment">
+            <div class="section-inner">
+                <h2>Service Investment</h2>
+                <p>Transparent pricing keeps designers, property managers, and homeowners aligned. You will always receive a written quote before we begin repairs.</p>
+                <ul>
+                    <li>$90 diagnostic visit credited toward the approved repair.</li>
+                    <li>Most Sub-Zero freezer repairs range from $195–$1,450 depending on the subsystem and accessibility.</li>
+                    <li>Sealed-system jobs include vacuum, recharge, leak test, and 1-year labor warranty.</li>
+                    <li>We stock common relays, sensors, gaskets, and fans to complete the job in a single visit.</li>
+                    <li>Permit handling, haul-away, and finish protection are included in premium installs.</li>
+                </ul>
+                <div class="schedule-wrapper"><a class="schedule-link" href="#contact-form">Schedule Service</a></div>
             </div>
-
-            <div class="benefits-block">
-                <img class="benefits-image" src="/assets/svg/fast.svg" alt="">
-                <h3 class="section-subheadline white">Same-day, everyday service</h3>
-                <p class="big white__muted">We at AC/DC Appliance Repair value our and our clients’ time. Call us and be sure to meet our master later on the same day. Our working hours are 8 a.m to 8 p.m. seven days a week.</p>
+        </section>
+        <section id="coverage" style="background:#f9fbff;">
+            <div class="section-inner">
+                <h2>Coverage Across Dallas-Fort Worth</h2>
+                <p>Our Sub-Zero freezer technicians operate daily across the Metroplex. Builders and homeowners trust us to protect panel-ready kitchens while keeping perishables safe.</p>
+                <ul class="coverage-list">
+                    <li>Southlake</li>
+                    <li>Westlake</li>
+                    <li>Highland Park</li>
+                    <li>University Park</li>
+                    <li>Colleyville</li>
+                    <li>Plano</li>
+                    <li>Frisco</li>
+                    <li>Prosper</li>
+                    <li>Grapevine</li>
+                    <li>Coppell</li>
+                    <li>Dallas</li>
+                    <li>Fort Worth</li>
+                </ul>
+                <div class="schedule-wrapper"><a class="schedule-link" href="#contact-form">Schedule Service</a></div>
             </div>
-
-        </div>
-
-    </div>
-</section>        <!-- TRUST -->
-        <section class="trust">
-    <div class="fixed-width-container">
-        <div class="col-8">
-            <hr>
-            <h2 class="section-headline">
-                Sub-Zero Repair Experts in DFW's Finest Neighborhoods
-            </h2>
-            <div class="trust-text-block">
-                <p class="big">When your $15,000 built-in refrigerator stops working, you need specialists who understand premium appliances. Seasoned technicians with years of Sub-Zero experience, same-day service in Southlake, Westlake, and Colleyville.</p>
-                <p class="big">We service Sub-Zero built-in refrigerators (French door, side-by-side, column), freezers, wine coolers, and ice makers with genuine OEM parts and 1-year warranty on all repairs.</p>
-            </div>
-
-            <div class="trust-list">
-
-                <div class="trust-block">
-                    <img class="trust-block-image" src="/assets/svg/trained.svg" alt="Sub-Zero repair experts">
-                    <div class="">
-                        <h3 class="section-subheadline trust-block-title">Sub-Zero Repair Experts</h3>
-                        <p class="big trust-block-text">Years of focused work on dual refrigeration systems, sealed compressors, and electronic controls. Not generic appliance repair.</p>
+        </section>
+        <section id="advantages">
+            <div class="section-inner">
+                <h2>Why AC/DC for Sub-Zero</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Factory-trained techs</h3>
+                        <p>Every technician completes annual Sub-Zero training, arrives with OEM documentation, and carries smart probes to record temps and pressures.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Clean, careful service</h3>
+                        <p>We protect flooring, overlay panels, and cabinetry with runners, foam, and painter's tape before removing a single screw.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Warranty & follow-up</h3>
+                        <p>Repairs include a 1-year warranty on labor and parts plus reminders for coil cleaning and filter changes.</p>
                     </div>
                 </div>
-
-                <div class="trust-block">
-                    <img class="trust-block-image" src="/assets/svg/insured.svg" alt="White-Glove Home Protection">
-                    <div class="">
-                        <h3 class="section-subheadline trust-block-title">White-Glove Home Protection</h3>
-                        <p class="big trust-block-text">Shoe covers, floor mats, complete cleanup. We respect your $2M+ home and leave no trace.</p>
-                    </div>
-                </div>
-
-                <div class="trust-block trust-block__wide">
-                    <img class="trust-block-image" src="/assets/svg/call-assistant.svg" alt="Same-Day Emergency Service">
-                    <div class="">
-                        <h3 class="section-subheadline trust-block-title">Same-Day Emergency Service</h3>
-                        <p class="big trust-block-text">Refrigeration failure demands immediate response. Priority service in Trophy Club, Highland Village, and Flower Mound.</p>
-                    </div>
-                </div>
-
+                <div class="schedule-wrapper"><a class="schedule-link" href="#contact-form">Schedule Service</a></div>
             </div>
+        </section>
+        <section id="testimonials" style="background:#f9fbff;">
+            <div class="section-inner">
+                <h2>Customer Reviews</h2>
+                <div class="testimonials">
+                    <div class="card">
+                        <blockquote>"Перестал морозить наш Sub-Zero в Southlake. Докладывали на каждом этапе, через день все снова идеально."</blockquote>
+                        <p>- Marina K.</p>
+                    </div>
+                    <div class="card">
+                        <blockquote>"Спасли продукты ночью перед приемом гостей. Пришли вовремя, оставили кухню чище, чем была."</blockquote>
+                        <p>- Daniel W.</p>
+                    </div>
+                </div>
+                <div class="schedule-wrapper"><a class="schedule-link" href="#contact-form">Schedule Service</a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" id="contact">
+        <div class="footer-grid">
+            <div>
+                <h3>Contact</h3>
+                <p>Phone: <a href="tel:+14697300309" style="color:#fff;">(469) 730-0309</a></p>
+                <p>Email: <a href="mailto:info@acdchomeservices.com" style="color:#fff;">info@acdchomeservices.com</a></p>
+                <p>Address: Bedford, TX</p>
+                <p>We recycle removed components and leave a written Sub-Zero service record for your files.</p>
+            </div>
+            <form id="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="tel" placeholder="Phone" required>
+                <textarea placeholder="Describe Issue" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
         </div>
-    </div>
-</section>
-        <!-- SERVICES  -->
-        <section class="section__colored">
-    <div class="fixed-width-container">
-        <div class="col-12">
-            <h2 class="section-headline white">
-                We repair Home Appliances in in Dallas-Fort Worth Area
-            </h2>
-            <h3 class="section-subheadline white">Residential appliances</h3>
-            <ul class="four-column">
-                <li class="white__muted"><a class="link--white__muted" href="/oven-repair">Oven, Double Oven Repair</a></li>
-                <li class="white__muted"><a class="link--white__muted" href="/oven-repair">Cooktop Repair</a></li>
-                <li class="white__muted"><a class="link--white__muted" href="refrigerator-repair">Refrigerator Repair</a></li>
-                <li class="white__muted"><a class="link--white__muted" href="/refrigerator-repair">Freezer Repair</a></li>
-                <li class="white__muted">Wine Cooler Repair</li>
-                <li class="white__muted"><a class="link--white__muted" href="/oven-repair">Range and Stove Repair</a></li>
-            </ul>
-    
-        </div>
-    </div>
-</section>
-        <!-- SERVICES  -->
-        <section class="section__colored">
-    <div class="fixed-width-container">
-        <div class="col-12">
-            <h2 class="section-headline white">
-                We repair Home Appliances in in Dallas-Fort Worth Area
-            </h2>
-            <h3 class="section-subheadline white">Residential appliances</h3>
-            <ul class="four-column">
-                <li class="white__muted"><a class="link--white__muted" href="/oven-repair">Oven, Double Oven Repair</a></li>
-                <li class="white__muted"><a class="link--white__muted" href="/oven-repair">Cooktop Repair</a></li>
-                <li class="white__muted"><a class="link--white__muted" href="refrigerator-repair">Refrigerator Repair</a></li>
-                <li class="white__muted"><a class="link--white__muted" href="/refrigerator-repair">Freezer Repair</a></li>
-                <li class="white__muted">Wine Cooler Repair</li>
-                <li class="white__muted"><a class="link--white__muted" href="/oven-repair">Range and Stove Repair</a></li>
-            </ul>
-    
-        </div>
-    </div>
-</section>
-
-    </article>
-</main>
-    <footer>
-    <div class="fixed-width-container footer-container">
-
-        <div class="footer-block">
-            <img class="footer-block-image" src="/assets/svg/logo-sign.svg" alt="AC/DC HVAC & Appliance Repair">
-            <p class="big white">Thank you for your interest in AC/DC Appliance Repair</p>
-        </div>
-
-        <div class="footer-block">
-            <p class="big white">
-                Address: 501 Turner Rd # 924, Grapevine TX 76051
-                <br>
-                Phone: +14697300309
-                <br>
-                E-mail: support@acdchomeservices.com
-            </p>
-        </div>
-
-        <div class="footer-block">
-            <p class="small white">
-                © 2019-2025 AC/DC HVAC & Appliance Repair, llc. All rights reserved.
-            </p>
-        </div>
-
-    </div>
-</footer>
-
-    <!-- <script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn-ru.bitrix24.ru/b17945132/crm/site_button/loader_2_mzs9f6.js');
-    </script> -->
-
-<!-- Phone Tracking Script -->
-<script src="/js/phone-tracking.js"></script>
+        <p class="footer-meta">© 2019-2025 AC/DC HVAC &amp; Appliance Repair, LLC. All rights reserved.</p>
+    </footer>
+    <script src="/js/phone-tracking.js"></script>
 </body>
 </html>
