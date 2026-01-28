@@ -90,6 +90,16 @@
     const utm = getUTMParams();
     const brandName = getBrandName();
     const channelName = getChannelName();
+    // GCLID for call click tracking
+    if (window.dataLayer) {
+      const gclid = new URLSearchParams(window.location.search).get('gclid');
+      window.dataLayer.push({
+        'event': 'call_click',
+        'phone': phone,
+        'gclid': gclid || 'none'
+      });
+    }
+
     document.querySelectorAll('a[href^="tel:"]').forEach(link => {
       link.href = `tel:${phone}`;
       if (link.textContent.match(/[\d\(\)\-\s]+/)) {
