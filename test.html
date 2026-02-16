@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub-Zero Hero Test</title>
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #0b0f1a;
+      --muted: #5f6673;
+      --border: #d8dbe1;
+      --primary: #111827;
+      --primary-fg: #ffffff;
+      --ok: #0f766e;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .wrap { max-width: 1360px; margin: 0 auto; padding: 0 24px; }
+
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      background: rgba(243, 244, 246, 0.9);
+      border-bottom: 1px solid var(--border);
+    }
+    .top-row {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 20px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .call {
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 56px 0 40px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 15px;
+      background: #e8eaee;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 7vw, 78px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
+    .dynamic {
+      display: inline-block;
+      color: var(--primary);
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+    .dynamic.fade { opacity: 0; transform: translateY(10px); }
+
+    .lead {
+      margin: 24px 0 28px;
+      color: var(--muted);
+      font-size: clamp(20px, 2.2vw, 42px);
+      line-height: 1.25;
+      max-width: 790px;
+    }
+
+    .features { display: grid; gap: 14px; margin: 0 0 26px; }
+    .feature { display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: start; }
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      color: var(--ok);
+      background: #ecfeff;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .feature h3 { margin: 0 0 4px; font-size: 36px; line-height: 1.1; letter-spacing: -0.01em; }
+    .feature p { margin: 0; color: var(--muted); font-size: 16px; }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 12px 0 18px;
+    }
+    .btn {
+      border-radius: 12px;
+      padding: 16px 22px;
+      font-size: 34px;
+      line-height: 1;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--primary-fg);
+      border-color: #0d1322;
+    }
+    .btn-ghost {
+      background: #fff;
+      color: var(--text);
+    }
+    .small-note {
+      color: var(--muted);
+      font-size: 34px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .stat {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 20px;
+      padding: 26px 20px;
+      text-align: center;
+    }
+    .stat .v {
+      font-size: 68px;
+      line-height: 1;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .stat .l {
+      margin: 0;
+      font-size: 38px;
+      line-height: 1.25;
+      color: var(--muted);
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 20px;
+      padding: 22px 24px;
+    }
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 44px;
+      letter-spacing: -0.01em;
+    }
+    .card ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+    .card li {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 34px;
+      line-height: 1.25;
+    }
+    .tick {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--ok);
+      margin-top: 2px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1200px) {
+      .feature h3, .btn, .small-note { font-size: 24px; }
+      .lead, .stat .l, .card li { font-size: 22px; }
+      .stat .v { font-size: 46px; }
+      .card h2 { font-size: 32px; }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .lead { font-size: 22px; }
+      .feature h3 { font-size: 28px; }
+      .stat .l, .card li, .btn, .small-note { font-size: 20px; }
+      .stat .v { font-size: 40px; }
+      .card h2 { font-size: 30px; }
+    }
+
+    @media (max-width: 480px) {
+      .wrap { padding: 0 14px; }
+      h1 { font-size: 38px; line-height: 1.1; }
+      .badge { font-size: 13px; }
+      .lead { font-size: 19px; }
+      .feature { grid-template-columns: 40px 1fr; }
+      .icon { width: 38px; height: 38px; font-size: 16px; }
+      .feature h3 { font-size: 22px; line-height: 1.12; }
+      .feature p { font-size: 14px; }
+      .btn { font-size: 18px; width: 100%; justify-content: center; }
+      .small-note { font-size: 16px; }
+      .stats { grid-template-columns: 1fr; }
+      .stat .v { font-size: 34px; }
+      .stat .l { font-size: 16px; }
+      .card h2 { font-size: 24px; }
+      .card li { font-size: 15px; grid-template-columns: 24px 1fr; }
+      .tick { width: 24px; height: 24px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#">Sub-Zero Repair DFW</a>
+      <a class="call" href="tel:+14697300309">(469) 730-0309</a>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="wrap hero-grid">
+      <section>
+        <div class="badge">★ Seasoned Sub-Zero repair experts</div>
+        <h1>
+          Expert
+          <span class="dynamic" id="dynamicWord">Refrigerators</span>
+          Repair
+        </h1>
+        <p class="lead">
+          Specialists dedicated to Sub-Zero systems across Dallas-Fort Worth.
+          Same-day diagnostics, white-glove service, and repairs done right on the first visit.
+        </p>
+
+        <div class="features">
+          <article class="feature">
+            <div class="icon">✓</div>
+            <div>
+              <h3>Built-in, column &amp; PRO refrigerators</h3>
+              <p>Expert service for all integrated and professional models</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="icon">✓</div>
+            <div>
+              <h3>Undercounter, beverage &amp; drawer units</h3>
+              <p>Specialized repair for compact and drawer refrigeration</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="icon">✓</div>
+            <div>
+              <h3>Wine storage, freezers &amp; standalone ice makers</h3>
+              <p>Complete care for all Sub-Zero appliances</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+14697300309">Book Same-Day Diagnostic</a>
+          <a class="btn btn-ghost" href="tel:+14697300309">📞 (469) 730-0309</a>
+        </div>
+        <p class="small-note">✓ $90 diagnostic fee credited toward repair</p>
+      </section>
+
+      <section>
+        <div class="stats">
+          <article class="stat">
+            <div class="v">$90</div>
+            <p class="l">Diagnostic fee credited when we complete your repair</p>
+          </article>
+          <article class="stat">
+            <div class="v">7+ yrs</div>
+            <p class="l">Exclusive Sub-Zero experience across DFW luxury homes</p>
+          </article>
+          <article class="stat">
+            <div class="v">400+</div>
+            <p class="l">Five-star reviews on Google, Yelp &amp; Nextdoor</p>
+          </article>
+          <article class="stat">
+            <div class="v">92%</div>
+            <p class="l">Repairs finished on the first visit with stocked OEM parts</p>
+          </article>
+        </div>
+
+        <div class="card">
+          <h2>Why Choose Us?</h2>
+          <ul>
+            <li><span class="tick">✓</span><span>Fully insured with stocked OEM parts</span></li>
+            <li><span class="tick">✓</span><span>Same-day diagnostics available</span></li>
+            <li><span class="tick">✓</span><span>White-glove service for luxury homes</span></li>
+            <li><span class="tick">✓</span><span>First-visit repair guarantee</span></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var words = ["Refrigerators", "Freezers", "Wine Storage", "Ice Makers"];
+      var i = 0;
+      var el = document.getElementById("dynamicWord");
+      if (!el) return;
+      setInterval(function () {
+        el.classList.add("fade");
+        setTimeout(function () {
+          i = (i + 1) % words.length;
+          el.textContent = words[i];
+          el.classList.remove("fade");
+        }, 180);
+      }, 2400);
+    })();
+  </script>
+</body>
+</html>
